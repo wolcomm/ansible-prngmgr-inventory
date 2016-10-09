@@ -1,3 +1,6 @@
+.. image:: https://travis-ci.org/wolcomm/ansible-prngmgr-inventory.svg?branch=master
+    :target: https://travis-ci.org/wolcomm/ansible-prngmgr-inventory
+
 ansible-prngmgr-inventory
 =========================
 
