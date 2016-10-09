@@ -1,0 +1,8 @@
+#
+# Configuration for the PrngMgr inventory module
+#
+[prngmgr]
+host: localhost
+port: 8000
+user: test_user
+pass: test_password
