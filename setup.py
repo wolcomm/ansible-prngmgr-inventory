@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 version = open('packaging/VERSION').read().strip()
 requirements = open('packaging/requirements.txt').read().split("\n")
-# test_requirements = open('packaging/requirements-test.txt').read().split("\n")
+test_requirements = open('packaging/requirements-test.txt').read().split("\n")
 
 setup(
     name='ansible-prngmgr-inventory',
@@ -22,16 +22,19 @@ setup(
     ],
     packages=find_packages(
         include=[
-            'test'
+            'prngmgr_inventory'
         ],
         exclude=[]
     ),
+    entry_points={
+        'console_scripts': ['prngmgr-inventory=prngmgr_inventory.command_line:main']
+    },
     include_package_data=True,
 
     url='https://github.com/wolcomm/ansible-prngmgr-inventory',
     download_url='https://github.com/wolcomm/ansible-prngmgr-inventory/%s' % version,
 
     install_requires=requirements,
-    # test_requires=test_requirements,
-    test_suite='test.exec'
+    tests_require=test_requirements,
+    test_suite='nose.collector'
 )

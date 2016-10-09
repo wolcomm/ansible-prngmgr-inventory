@@ -1,5 +1,5 @@
 include README.md
 include LICENSE
-include prngmgr_inventory.ini.example
 include packaging/VERSION
 recursive-include packaging *.txt
+include prngmgr_inventory/prngmgr_inventory.ini.example

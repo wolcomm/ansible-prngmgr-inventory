@@ -95,4 +95,4 @@ ENV/
 .ropeproject
 
 # Configuration File
-prngmgr_inventory.ini
+prngmgr_inventory/prngmgr_inventory.ini
