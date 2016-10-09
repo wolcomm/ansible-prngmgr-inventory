@@ -1,6 +1,10 @@
 from setuptools import setup, find_packages
 
 
+def readme():
+    with open('README.rst') as f:
+        return f.read()
+
 version = open('packaging/VERSION').read().strip()
 requirements = open('packaging/requirements.txt').read().split("\n")
 test_requirements = open('packaging/requirements-test.txt').read().split("\n")
@@ -11,7 +15,7 @@ setup(
     author='Workonline Communications',
     author_email='communications@workonkonline.co.za',
     description='An ansible dynamic inventory module to fetch peering session data from prngmgr',
-    long_description='',
+    long_description=readme(),
     license='LICENSE',
     classifiers=[
         'Development Status :: 3 - Alpha',
