@@ -39,10 +39,16 @@ class Inventory(object):
         else:
             url = "http://%s:%s/api/router/" % (self.config.get('host'), self.config.get('port'))
             data = self._api_query(url=url)
-        return data
+        routers = {
+            'hosts': [],
+            'vars': {}
+        }
+        for item in data:
+            routers['hosts'].append(item['hostname'])
+        return {'routers': routers}
 
     def _host_data(self, host):
-        return {'type': 'host', 'host': host}
+        return {}
 
     def _api_query(self, url=None):
         if self.config.get('user'):

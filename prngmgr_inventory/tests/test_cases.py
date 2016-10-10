@@ -12,7 +12,7 @@ class TestOutput(TestCase):
         cli = ['-f', self.path, '-d', data, '--list']
         args = parser.Parser(args=cli).args
         output = inventory.Inventory(args=args).output
-        self.assertTrue(isinstance(json.loads(output), list))
+        self.assertTrue(isinstance(json.loads(output), dict))
 
     def test_host(self):
         host = 'test1.example.net'
