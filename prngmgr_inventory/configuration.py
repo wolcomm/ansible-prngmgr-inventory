@@ -3,9 +3,10 @@ import ConfigParser
 
 
 class Config(object):
-    def __init__(self):
+    def __init__(self, path=None):
         config = ConfigParser.SafeConfigParser()
-        path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'prngmgr_inventory.ini')
+        if not path or not os.path.isfile(path):
+            path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'prngmgr_inventory.ini')
         config.read(path)
         self._config = config
 

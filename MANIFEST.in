@@ -3,3 +3,4 @@ include LICENSE
 include packaging/VERSION
 recursive-include packaging *.txt
 include prngmgr_inventory/prngmgr_inventory.ini.example
+include prngmgr_inventory/tests/prngmgr_inventory_test.ini

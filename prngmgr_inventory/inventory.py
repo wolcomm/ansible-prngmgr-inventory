@@ -5,8 +5,9 @@ from prngmgr_inventory import configuration
 
 class Inventory(object):
     def __init__(self, args=None):
-        self._config = configuration.Config()
         self._args = args
+        path = self._args.path
+        self._config = configuration.Config(path=path)
         self._encoder = json.JSONEncoder()
 
     @property

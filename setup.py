@@ -26,7 +26,8 @@ setup(
     ],
     packages=find_packages(
         include=[
-            'prngmgr_inventory'
+            'prngmgr_inventory',
+            'prngmgr_inventory.*'
         ],
         exclude=[]
     ),
