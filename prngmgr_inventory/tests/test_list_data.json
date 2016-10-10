@@ -1,0 +1,18 @@
+[
+  {
+    "url": "http://localhost:8000/api/router/1/?format=json",
+    "status": "",
+    "created": "2016-08-18T22:27:41.386000Z",
+    "updated": "2016-08-18T22:27:41.386000Z",
+    "version": 0,
+    "hostname": "test1.example.net"
+  },
+  {
+    "url": "http://localhost:8000/api/router/2/?format=json",
+    "status": "",
+    "created": "2016-08-18T22:27:57.315000Z",
+    "updated": "2016-08-18T22:27:57.315000Z",
+    "version": 0,
+    "hostname": "test2.example.net"
+  }
+]
